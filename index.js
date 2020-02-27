@@ -15,21 +15,21 @@ var pages = {
     rightPage: "onthedead"
   },
   onthewrong: {
-    text: "Keep Going",
+    text: "Uhh ",
     leftLabel: "Wrong Way",
     centerLabel: "Enter Here",
     rightLabel: "Dead Eoad",
     leftPage: "death",
-    centerPage: "life",
+    centerPage: "tooYoung",
     rightPage: "death"
   },
   onthedead: {
-    text: "Keep Going",
+    text: "Listen to what others say",
     leftLabel: "Wrong Way",
     centerLabel: "Enter Here",
     rightLabel: "Dead End ",
     leftPage: "trap",
-    centerPage: "tooYoung",
+    centerPage: "life",
     rightPage: "trap"
   },
   life: {
@@ -37,7 +37,7 @@ var pages = {
     imageUrl: "https://media.giphy.com/media/xT0xezQGU5xCDJuCPe/giphy.gif"
   },
   tooYoung: {
-    text: "Young Man Go Back",
+    text: "Don't believe people too easily",
     centerLabel: "Back",
     centerPage: "start"
   },
