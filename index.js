@@ -15,7 +15,7 @@ var pages = {
     rightPage: "onthedead"
   },
   onthewrong: {
-    text: "Uhh ",
+    text: "Wrong way is the wrong way ",
     leftLabel: "Wrong Way",
     centerLabel: "Enter Here",
     rightLabel: "Dead Eoad",
@@ -37,7 +37,7 @@ var pages = {
     imageUrl: "https://media.giphy.com/media/xT0xezQGU5xCDJuCPe/giphy.gif"
   },
   tooYoung: {
-    text: "Don't believe people too easily",
+    text: "Don't believe other people too easily",
     centerLabel: "Back",
     centerPage: "start"
   },
