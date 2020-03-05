@@ -6,7 +6,7 @@ import "./styles.css";
 var pages = {
   start: {
     text:
-      "Welcome to Digital Maze, Make Your Choice to Get to Your Destination?",
+      "Welcome to Digital Maze, Make Your Choice to Get to Your Destination",
     leftLabel: "Wrong Way",
     centerLabel: "Enter Here",
     rightLabel: "Dead End",
@@ -14,6 +14,16 @@ var pages = {
     centerPage: "tooYoung",
     rightPage: "onthedead"
   },
+  keepGoing: {
+    text: "Keep Going",
+    leftLabel: "Wrong Way",
+    centerLabel: "Enter Here",
+    rightLabel: "Dead End",
+    leftPage: "onthewrong",
+    centerPage: "tooYoung",
+    rightPage: "onthedead"
+  },
+
   onthewrong: {
     text: "Wrong way is the wrong way ",
     leftLabel: "Wrong Way",
@@ -33,13 +43,13 @@ var pages = {
     rightPage: "trap"
   },
   life: {
-    text: "Congratulation You've made it to the destination!",
+    text: "Congratulation You've made the way out!",
     imageUrl: "https://media.giphy.com/media/xT0xezQGU5xCDJuCPe/giphy.gif"
   },
   tooYoung: {
     text: "Don't believe other people too easily",
     centerLabel: "Back",
-    centerPage: "start"
+    centerPage: "fakeStart"
   },
   trap: {
     text: " You are trapped "
@@ -47,7 +57,26 @@ var pages = {
   death: {
     text: " Oops, It's dead end, Go back",
     centerLabel: "Back",
-    centerPage: "start"
+    centerPage: "keepGoing"
+  },
+  fakewrongway: {
+    text: "Wrong way is the wrong way ",
+    leftLabel: "Wrong Way",
+    centerLabel: "Enter Here",
+    rightLabel: "Dead Eoad",
+    leftPage: "death",
+    centerPage: "tooYoung",
+    rightPage: "death"
+  },
+  fakeStart: {
+    text:
+      "Welcome to Digital Maze, Make Your Choice to Get to Your Destination",
+    leftLabel: "Wrong Way",
+    centerLabel: "Enter Here",
+    rightLabel: "Dead End",
+    leftPage: "fakewrongway",
+    centerPage: "life",
+    rightPage: "onthedead"
   }
 };
 
@@ -87,7 +116,6 @@ class App extends Component {
         </button>
       );
     }
-
     if (pageData.centerPage) {
       button2 = (
         <button onClick={() => this.goToPage(pageData.centerPage)}>
